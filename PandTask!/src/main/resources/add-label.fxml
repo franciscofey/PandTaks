@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="450" prefWidth="800" style="-fx-background-color: #f6f6f6;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddLabelController">
+
+
+    <ImageView fitHeight="220.0" fitWidth="281.0" layoutX="421.0" layoutY="82.0" />
+
+
+    <VBox alignment="TOP_LEFT" layoutX="40" layoutY="40" prefWidth="320" spacing="15">
+
+        <Label style="-fx-font-size: 20; -fx-text-fill: #003366; -fx-font-weight: bold;" text="Add Label:" />
+        <TextField fx:id="labelNameField" prefWidth="250" promptText="Social Events" />
+
+        <Label style="-fx-font-size: 16;" text="Choose A Color:" />
+        <FlowPane fx:id="colorPickerPane" hgap="10" vgap="10" />
+
+        <Button fx:id="doneButton" onAction="#onDoneClicked" prefWidth="100" style="-fx-background-color: #003366; -fx-text-fill: white; -fx-font-size: 14; -fx-background-radius: 8;" text="Done!" />
+    </VBox>
+   <Button fx:id="closeButton" alignment="TOP_RIGHT" layoutX="725.0" layoutY="28.0" mnemonicParsing="false" onAction="#onCloseButtonClicked" text="X" />
+</AnchorPane>

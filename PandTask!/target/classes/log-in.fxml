@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #fcfcfc;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LogInController">
+    <children>
+        <VBox alignment="CENTER" layoutX="350.0" layoutY="110.0" prefHeight="480.0" prefWidth="300.0" spacing="15.0" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="110.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
+                    <children>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="images/PandTaskLogo.jpg" />
+                            </image>
+                        </ImageView>
+                        <Label text="PANDTASK">
+                            <font>
+                                <Font name="Arial" size="36.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="10.0" />
+                    </VBox.margin>
+                </HBox>
+
+                <Label text="LOG IN">
+                    <font>
+                        <Font name="Arial Light" size="24.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="20.0" />
+                    </VBox.margin>
+                </Label>
+
+                <Label fx:id="messageLabel" text="Please Enter your Email Address and Password">
+                    <font>
+                        <Font name="Arial Light" size="12"/>
+                    </font>
+                </Label>
+
+                <VBox prefWidth="100.0" spacing="5.0">
+                    <children>
+                        <Label text="Email Address:" />
+                        <TextField fx:id="emailField" promptText="user@example.com" />
+                    </children>
+                </VBox>
+
+                <VBox prefWidth="100.0" spacing="5.0">
+                    <children>
+                        <Label text="Password:" />
+                        <PasswordField fx:id="passwordField" promptText="••••••••" />
+                    </children>
+                </VBox>
+
+                <CheckBox fx:id="rememberMeCheck" onAction="#handleRememberMe" mnemonicParsing="false" text="Remember me">
+                    <VBox.margin>
+                        <Insets top="5.0" />
+                    </VBox.margin>
+                </CheckBox>
+
+                <Button fx:id="loginButton" onAction="#handleLogInAction" mnemonicParsing="false" text="LOG IN">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Button>
+
+                <Hyperlink fx:id="signUpLink" onAction="#handleSwitchToSignUp" text="Don't have an account? Sign up." />
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

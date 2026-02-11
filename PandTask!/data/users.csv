@@ -1,0 +1,12 @@
+id,username,email,password
+1001,barbara,barbara@email.com,hashed_password123
+1002,alex,alex@email.com,hashed_password456
+1003,maria,maria@email.com,hashed_password789
+1004,john,john@email.com,hashed_password321
+1005,lisa,lisa@email.com,hashed_password654
+1006,kevin,kevin@email.com,hashed_password987
+1007,sophia,sophia@email.com,hashed_passwordabc
+1008,anita,ana@email.com,ana123
+1009,Paula,paula@email.com,pala123
+1010,Shahad,shahad@gmail.com,shahad11
+1011,francisco,franciso@email,fran23

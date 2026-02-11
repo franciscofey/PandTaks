@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #f0f0f0;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SettingsController">
+    <children>
+        <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="20.0" prefHeight="50.0" prefWidth="760.0" spacing="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+            <children>
+                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/PandTaskLogo.jpg" />
+               </image></ImageView>
+                <Label text="PANDTASK">
+                    <font>
+                        <Font name="Arial" size="24.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+
+        <AnchorPane layoutX="100.0" layoutY="100.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff; -fx-background-radius: 15; -fx-border-color: #cccccc; -fx-border-radius: 15;" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0">
+            <children>
+                <VBox alignment="CENTER" layoutX="30.0" layoutY="30.0" prefHeight="340.0" prefWidth="180.0" spacing="15.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0">
+                    <children>
+                        <Label text="SETTINGS:">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <VBox alignment="CENTER" prefHeight="150.0" prefWidth="150.0">
+                            <children>
+                                <Circle centerX="75.0" centerY="75.0" fill="WHITE" radius="70.0" stroke="BLACK" strokeType="INSIDE" />
+                                <Label text=":-|" translateY="-85.0">
+                                    <font>
+                                        <Font name="Arial Bold" size="24.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </VBox>
+                        <Label fx:id="nameLabel" text="Name">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="logOutButton" mnemonicParsing="false" onAction="#onLogOutButtonClicked" prefHeight="40.0" prefWidth="120.0" text="LOG OUT">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+
+                <VBox layoutX="250.0" layoutY="70.0" prefHeight="260.0" prefWidth="320.0" spacing="10.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="70.0">
+                    <children>
+                 <Label fx:id="messageLabel" prefHeight="17.0" prefWidth="326.0" text="Please enter your new information and password">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                        <Label text="Username:">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="usernameField" />
+                        <Label text="Password:">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin>
+                        </Label>
+                        <PasswordField fx:id="passwordField" />
+                    <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                        <children>
+                            <Button mnemonicParsing="false" onAction="#changeUserInfo" text="Submit" />
+                     </children>
+                  </VBox>
+                    </children>
+                </VBox>
+
+                <Button fx:id="closeButton" layoutX="556.0" layoutY="14.0" mnemonicParsing="false" onAction="#onCloseButtonClicked" text="X" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

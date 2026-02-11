@@ -1,0 +1,37 @@
+id,userId,title,startHour,endHour,repeat,description,eventDate,priority
+2001,1001,Finish project,9AM,11AM,None,Complete UI and database connection,2025-10-25,High
+2002,1001,Buy groceries,5PM,6PM,Weekly,Get milk and eggs,2025-10-19,Medium
+2003,1002,Submit homework,7PM,11PM,None,Upload to portal before midnight,2025-10-21,High
+2004,1004,Plan vacation,10AM,12PM,None,Book flights and hotels,2025-11-05,Medium
+2005,1004,Team meeting,2PM,3PM,Weekly,Prepare slides for presentation,2025-10-26,High
+2006,1005,Gym session,6AM,8AM,Daily,Leg day workout,2025-10-24,Low
+2007,1007,Read book,8PM,9PM,None,Finish reading novel,2025-10-30,Low
+2012,1001,ver jjk con flaco,7PM,8PM,None,jjk on imax,2025-11-15,Low
+2013,1008,caminar en el riverwalk,8PM,9PM,None,have a good walk on the riverwalk,2025-11-15,Medium
+2015,1001,comer con amigues,4AM,5AM,None,con anita y juanito,2025-11-16,Low
+2016,1006,hola prueba,1PM,2PM,None,proobando,2025-11-15,Low
+2017,1001,terminar el proyecto de java,10PM,12AM,None,o finiquitar,2025-11-14,High
+2018,1001,terminar java project,8PM,10PM,None,o finiquitar,2025-11-14,High
+2019,1008,hace ejercicio con los panamitos,4AM,5AM,None,para estar en forma,2025-11-16,Low
+2023,1008,cenar con familia,9PM,10PM,None,la familiaa,2025-11-14,Low
+2024,1009,finish hw,6PM,7AM,None,finish lin alhw,2025-11-15,High
+2025,1010,complete project in cs,9AM,10AM,None,complete homework as soon as possible.!!!,2025-11-14,Medium
+2026,1010,check on my pet,3AM,4AM,None,fsdffds,2025-11-15,Low
+2027,1010,workout,8PM,9AM,None,aaa,2025-11-16,Medium
+2028,1010,stu(dying) :C,8AM,9AM,None,,2025-11-14,High
+2030,1008,hang out with friends,8AM,9AM,None,hang out with francisco,2025-11-15,Low
+2033,1008,date with bf,7PM,8PM,None,go riverwalk and have dinner,2025-11-18,Medium
+2035,1008,hablar con pepi,8AM,9AM,None,facetime pepi,2025-11-19,Medium
+2036,1008,jjk movie,10PM,11PM,None,Watch jjk movie with bf,2025-12-03,Low
+2038,1008,visit danis simposium,10AM,11AM,None,rate his project,2025-11-25,Medium
+2040,1008,Go shopping,6AM,7AM,None,Go to San Marcos,2025-11-28,Medium
+2041,1001,finish linear algebra project,11PM,12AM,None,finish quiz and project,2025-12-04,High
+2044,1001,Go running,4AM,5AM,None,Around the hood,2025-11-26,Low
+2045,1008,finish java project,6PM,10PM,None,ASAP,2025-11-28,High
+2046,1008,do laundry,4AM,6AM,None,do laundry early in the morning,2025-12-02,Medium
+2047,1008,go to church,10AM,12PM,Weekly,go to CBC,2025-11-30,Low
+2048,1008,jounaling,5AM,6AM,Monthly,write on my journal,2025-12-02,Low
+2049,1008,take a break,2AM,4AM,None,please take a break,2025-11-29,High
+2050,1001,new year's family celebration,5AM,6AM,Yearly,small gathering,2027-01-01,Medium
+2051,1007,do grocery shopping,9AM,10AM,Weekly,buy food,2025-11-29,Medium
+2052,1011,test,10AM,11AM,None,test test,2025-11-29,Medium

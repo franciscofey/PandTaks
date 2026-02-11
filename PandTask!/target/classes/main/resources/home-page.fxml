@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #f0f0f0;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HomePageController">
+
+    <children>
+
+        <HBox alignment="CENTER_LEFT" spacing="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+            <children>
+                <ImageView fitHeight="70.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/PandTaskLogo.jpg" />
+                    </image>
+                </ImageView>
+                <Label text="PANDTASK">
+                    <font><Font name="Arial" size="24.0" /></font>
+                </Label>
+
+                <Pane prefHeight="50.0" prefWidth="111.0" HBox.hgrow="ALWAYS" />
+
+                <Button onAction="#onPrevWeekClicked" style="-fx-font-weight: bold; -fx-background-radius: 5;" text="&lt;" />
+                <Label fx:id="monthLabel" alignment="CENTER" prefWidth="200.0" style="-fx-font-size: 20px;" text="January 2025" />
+                <Button onAction="#onNextWeekClicked" style="-fx-font-weight: bold; -fx-background-radius: 5;" text="&gt;" />
+
+                <Pane prefHeight="50.0" prefWidth="203.0" />
+
+                <Button fx:id="addTaskButton" onAction="#onAddTaskButton" prefHeight="36.0" prefWidth="35.0" text="+">
+                    <font><Font size="14.0" /></font>
+                </Button>
+            </children>
+        </HBox>
+
+        <VBox prefWidth="200.0" spacing="15.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="80.0">
+            <children>
+            <Label contentDisplay="CENTER" text="Add your labels here!" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets left="43.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+                <VBox fx:id="labelsContainer" prefHeight="239.0" prefWidth="200.0" spacing="8.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10; -fx-border-color: #cccccc; -fx-border-radius: 10; -fx-padding: 10;">
+
+                </VBox>
+
+                <Button fx:id="addLabelButton" onAction="#onAddLabelClicked" prefHeight="28" prefWidth="200" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="+" />
+
+                <VBox fx:id="quickTasksVBox" spacing="8.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10; -fx-border-color: #cccccc; -fx-border-radius: 10; -fx-padding: 10;" VBox.vgrow="ALWAYS">
+                    <HBox alignment="CENTER_LEFT" spacing="5.0">
+                        <children>
+                            <TextField fx:id="quickTaskInput" promptText="Enter a quick task here!" style="-fx-background-radius: 5;" HBox.hgrow="ALWAYS" />
+                            <Button onAction="#onAddQuickTaskClicked" style="-fx-font-weight: bold;" text="+" />
+                        </children>
+                    </HBox>
+                    <ScrollPane fitToWidth="true" style="-fx-background-color: transparent; -fx-background: transparent;" VBox.vgrow="ALWAYS">
+                        <content>
+                            <VBox fx:id="tasksContainer" spacing="5.0" />
+                        </content>
+                    </ScrollPane>
+                </VBox>
+
+                <Button fx:id="settingsButton" onAction="#onSettingsButtonClicked" prefHeight="40" prefWidth="200" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Settings" />
+            </children>
+        </VBox>
+
+        <GridPane fx:id="headerGrid" alignment="TOP_CENTER" gridLinesVisible="true" AnchorPane.leftAnchor="235.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="80.0">
+            <columnConstraints>
+                <ColumnConstraints prefWidth="50.0" />
+                <ColumnConstraints hgrow="ALWAYS" />
+                <ColumnConstraints hgrow="ALWAYS" />
+                <ColumnConstraints hgrow="ALWAYS" />
+                <ColumnConstraints hgrow="ALWAYS" />
+                <ColumnConstraints hgrow="ALWAYS" />
+                <ColumnConstraints hgrow="ALWAYS" />
+                <ColumnConstraints hgrow="ALWAYS" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints prefHeight="40.0" />
+            </rowConstraints>
+            <children>
+                <Label text="" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Label fx:id="lblSun" text="Sun" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+                <Label fx:id="lblMon" text="Mon" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+                <Label fx:id="lblTue" text="Tue" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+                <Label fx:id="lblWed" text="Wed" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+                <Label fx:id="lblThu" text="Thu" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+                <Label fx:id="lblFri" text="Fri" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+                <Label fx:id="lblSat" text="Sat" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+            </children>
+        </GridPane>
+
+        <ScrollPane fx:id="calendarScrollPane" fitToHeight="false" fitToWidth="true" hbarPolicy="NEVER" vbarPolicy="AS_NEEDED" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="235.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="120.0">
+            <content>
+                <GridPane fx:id="calendarGrid" alignment="TOP_CENTER" gridLinesVisible="true">
+
+                    <columnConstraints>
+                        <ColumnConstraints prefWidth="50.0" /> <ColumnConstraints hgrow="ALWAYS" />
+                        <ColumnConstraints hgrow="ALWAYS" />
+                        <ColumnConstraints hgrow="ALWAYS" />
+                        <ColumnConstraints hgrow="ALWAYS" />
+                        <ColumnConstraints hgrow="ALWAYS" />
+                        <ColumnConstraints hgrow="ALWAYS" />
+                        <ColumnConstraints hgrow="ALWAYS" />
+                    </columnConstraints>
+
+                    <rowConstraints>
+                        <RowConstraints prefHeight="80.0" vgrow="ALWAYS" /> <RowConstraints prefHeight="80.0" vgrow="ALWAYS" />
+                        <RowConstraints prefHeight="80.0" vgrow="ALWAYS" />
+                        <RowConstraints prefHeight="80.0" vgrow="ALWAYS" />
+                        <RowConstraints prefHeight="80.0" vgrow="ALWAYS" />
+                        <RowConstraints prefHeight="80.0" vgrow="ALWAYS" />
+                        <RowConstraints prefHeight="80.0" vgrow="ALWAYS" />
+                        <RowConstraints prefHeight="80.0" vgrow="ALWAYS" />
+                        <RowConstraints prefHeight="80.0" vgrow="ALWAYS" />
+                        <RowConstraints prefHeight="80.0" vgrow="ALWAYS" />
+                        <RowConstraints prefHeight="80.0" vgrow="ALWAYS" /> <RowConstraints prefHeight="80.0" vgrow="ALWAYS" /> <RowConstraints prefHeight="80.0" vgrow="ALWAYS" />
+                        <RowConstraints prefHeight="80.0" vgrow="ALWAYS" />
+                        <RowConstraints prefHeight="80.0" vgrow="ALWAYS" />
+                        <RowConstraints prefHeight="80.0" vgrow="ALWAYS" />
+                        <RowConstraints prefHeight="80.0" vgrow="ALWAYS" />
+                        <RowConstraints prefHeight="80.0" vgrow="ALWAYS" />
+                        <RowConstraints prefHeight="80.0" vgrow="ALWAYS" />
+                        <RowConstraints prefHeight="80.0" vgrow="ALWAYS" />
+                        <RowConstraints prefHeight="80.0" vgrow="ALWAYS" />
+                        <RowConstraints prefHeight="80.0" vgrow="ALWAYS" />
+                        <RowConstraints prefHeight="80.0" vgrow="ALWAYS" /> <RowConstraints prefHeight="80.0" vgrow="ALWAYS" /> </rowConstraints>
+
+                    <children>
+                        <Label text="1 AM" translateY="-8" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="0" GridPane.valignment="TOP" />
+
+                        <Label text="2 AM" translateY="-8" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+                        <Label text="3 AM" translateY="-8" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+                        <Label text="4 AM" translateY="-8" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+                        <Label text="5 AM" translateY="-8" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="TOP" />
+                        <Label text="6 AM" translateY="-8" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="TOP" />
+                        <Label text="7 AM" translateY="-8" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="TOP" />
+                        <Label text="8 AM" translateY="-8" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="7" GridPane.valignment="TOP" />
+                        <Label text="9 AM" translateY="-8" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="8" GridPane.valignment="TOP" />
+                        <Label text="10 AM" translateY="-8" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="9" GridPane.valignment="TOP" />
+                        <Label text="11 AM" translateY="-8" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="10" GridPane.valignment="TOP" />
+
+                        <Label text="12 PM" translateY="-8" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="11" GridPane.valignment="TOP" />
+
+                        <Label text="1 PM" translateY="-8" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="12" GridPane.valignment="TOP" />
+                        <Label text="2 PM" translateY="-8" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="13" GridPane.valignment="TOP" />
+                        <Label text="3 PM" translateY="-8" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="14" GridPane.valignment="TOP" />
+                        <Label text="4 PM" translateY="-8" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="15" GridPane.valignment="TOP" />
+                        <Label text="5 PM" translateY="-8" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="16" GridPane.valignment="TOP" />
+                        <Label text="6 PM" translateY="-8" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="17" GridPane.valignment="TOP" />
+                        <Label text="7 PM" translateY="-8" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="18" GridPane.valignment="TOP" />
+                        <Label text="8 PM" translateY="-8" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="19" GridPane.valignment="TOP" />
+                        <Label text="9 PM" translateY="-8" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="20" GridPane.valignment="TOP" />
+                        <Label text="10 PM" translateY="-8" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="21" GridPane.valignment="TOP" />
+                        <Label text="11 PM" translateY="-8" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="22" GridPane.valignment="TOP" />
+                        <Label text="12 AM" translateY="-8" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="23" GridPane.valignment="TOP" />
+                    </children>
+                </GridPane>
+            </content>
+        </ScrollPane>
+
+    </children>
+</AnchorPane>
